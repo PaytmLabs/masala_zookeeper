@@ -17,6 +17,11 @@
 # limitations under the License.
 
 include_recipe 'masala_base::default'
+
+# Ensure this default is not overwritten by other cookbooks (IE: exhibitor)
+# One of: 'upstart', 'runit', 'exhibitor', 'sysv'
+node.default[:zookeeper][:service_style] = 'sysv'
+
 include_recipe 'zookeeper::default'
 
 # For some reason parent recipe does not support setting the ID.... add it in here.
