@@ -8,4 +8,4 @@ version          '0.1.0'
 
 depends          'masala_base', '~> 0.1.0'
 depends          'masala_ldap', '~> 0.1.0'
-depends          'zookeeper', '~> 3.0.0'
+depends          'zookeeper', '~> 5.0.1'
